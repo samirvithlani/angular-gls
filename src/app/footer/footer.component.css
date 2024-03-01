@@ -1,0 +1,14 @@
+.footer{
+    background-color: cornflowerblue;
+    padding: 20px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    color:black;
+    font-size: 14px;
+    font-weight: 500;
+    border-top: 1px solid #e9ecef;
+    z-index: 1000;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.05);
+}

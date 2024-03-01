@@ -1,0 +1,8 @@
+.header{
+    background-color: aquamarine;
+    padding: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.1);
+    height: 60px;
+    text-align: center;
+}

@@ -1,0 +1,26 @@
+<h1>EMPLOYEE COMPONENT...</h1>
+<h1>HELLO</h1>
+<h1>Application title = {{title}}</h1>
+<h2>Name = {{name}}</h2>
+<h3>Age  = {{age}}</h3>
+<h4>Is Married = {{isMarried}}</h4>
+
+<!-- terneray operator with age -->
+
+<h5>User is = {{age > 18 ? 'Adult' : 'Minor'}}</h5>
+<!-- //ng if  -->
+
+<div *ngIf="age > 18">
+    <h6>User is Adult</h6>
+</div>
+<ul>
+    <li *ngFor = "let v of vehicles">
+        {{v}}
+    </li>
+</ul>
+<div>
+    <ul>
+        <li *ngFor = "let u of users">
+            {{u.id}} - {{u.name}} - {{u.age}}
+        </li>
+    </ul>
