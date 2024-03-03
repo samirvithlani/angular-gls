@@ -1,0 +1,87 @@
+<h1>FORM COMPONENT DEMO</h1>
+<!-- //ng model is used for 2 way data binidin -->
+<!-- //[(ngModel)] -->
+<!-- // (event binding) -->
+<!-- //[] property binding -->
+<!-- [()]  2 way data binding -->
+<form (ngSubmit)="onSubmit()" #userForm="ngForm">
+  <div>
+    <input
+      type="text"
+      required
+      #name="ngModel"
+      name="name"
+      [(ngModel)]="user.name"
+      placeholder="Enter name"
+    />
+    <span *ngIf="name.invalid"> Name is required * </span>
+  </div>
+  <div>
+    <input
+      type="text"
+      required
+      pattern="[a-zA-Z0-9_@]{8,15}"
+      #password="ngModel"
+      name="password"
+      [(ngModel)]="user.password"
+      placeholder="Enter password"
+    />
+    <span *ngIf="password.invalid"> Password is required * </span>
+  </div>
+  <div>
+    <input
+      type="text"
+      required
+      #contact="ngModel"
+      name="contact"
+      [(ngModel)]="user.contact"
+      placeholder="enter mobileno"
+      pattern="[6-9]{1}[0-9]{9}"
+    />
+    <span *ngIf="contact.invalid"> Contact is required *</span>
+  </div>
+  <div>
+    <label>GENDER</label>
+    MALE :
+    <input
+      type="radio"
+      required
+      #gender="ngModel"
+      name="gender"
+      [(ngModel)]="user.gender"
+      value="male"
+    />
+    FEMALE :
+    <input
+      type="radio"
+      required
+      #gender="ngModel"
+      name="gender"
+      [(ngModel)]="user.gender"
+      value="female"
+    />
+  </div>
+  <div>
+    <label>HOBBIES</label>
+    <input
+      type="checkbox"
+      required
+      #hobbies="ngModel"
+      name="hobbies"
+      [(ngModel)]="user.hobbies"
+      value="cricket"
+    />
+    CRICKET
+    <input
+      type="checkbox"
+      required
+      #hobbies="ngModel"
+      name="hobbies"
+      [(ngModel)]="user.hobbies"
+      value="football"
+    />
+  </div>
+  <div>
+    <button type="submit" [disabled]="userForm.invalid">Submit</button>
+  </div>
+</form>
