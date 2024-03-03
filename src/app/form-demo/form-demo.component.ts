@@ -22,6 +22,8 @@ export class FormDemoComponent {
 
   onSubmit(){
     console.log("form subbmited..",this.user);
+    //alert("form subbmited..");
+    alert(JSON.stringify(this.user));
   }
 
 }
